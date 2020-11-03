@@ -1,0 +1,22 @@
+micronaut:
+  application:
+    name: httpservicemn
+  server:
+    port: 8080
+  metrics:
+    enabled: true
+    export:
+      prometheus:
+        enabled: true
+        descriptions: true
+        step: PT1M
+kafka.bootstrap.servers: localhost:9092
+vertx:
+  mysql:
+    client:
+      port: 3306
+      host: localhost
+      database: webhooks
+      user: root
+      password: password
+      maxSize: 5
