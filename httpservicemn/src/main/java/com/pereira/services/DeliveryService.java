@@ -7,8 +7,6 @@ import io.reactivex.Single;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import static io.reactivex.Single.just;
-
 @Singleton
 public class DeliveryService {
 
@@ -16,8 +14,9 @@ public class DeliveryService {
     private WebhookProducer webhookProducer;
 
     public Single<Webhook> sendWebhook(Webhook webhook) {
-        webhookProducer.sendWebhook(webhook);
-        return just(webhook);
+        return webhookProducer
+                .sendWebhook(webhook)
+                .toSingleDefault(webhook);
     }
 
 }
