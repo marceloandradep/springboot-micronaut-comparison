@@ -2,7 +2,7 @@ micronaut:
   application:
     name: messagingservicemn
   server:
-    port: 8081
+    port: 8080
   metrics:
     export:
       prometheus:
@@ -20,3 +20,4 @@ vertx:
       user: root
       password: password
       maxSize: 5
+      cache-prepared-statements: true

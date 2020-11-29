@@ -10,6 +10,10 @@ micronaut:
         enabled: true
         descriptions: true
         step: PT1M
+    binders:
+      kafka:
+        enabled: false
+endpoints.prometheus.sensitive: false
 kafka.bootstrap.servers: localhost:9092
 vertx:
   mysql:
@@ -20,3 +24,4 @@ vertx:
       user: root
       password: password
       maxSize: 5
+      cache-prepared-statements: true
