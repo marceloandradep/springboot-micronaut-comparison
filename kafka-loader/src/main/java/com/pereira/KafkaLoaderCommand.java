@@ -18,7 +18,7 @@ public class KafkaLoaderCommand implements Runnable {
     boolean verbose;
 
     @Option(names = {"-m", "--messages"}, description = "Number of messages in between")
-    int messages = 1000;
+    int messages = 500;
 
     @Inject
     private MessageProducer messageProducer;
